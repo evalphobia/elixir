@@ -2,7 +2,7 @@ language: none
 
 env:
   MIX_ENV: "test"
-  PATH: "${PATH}:${HOME}/erlang/bin"
+  PATH: "${HOME}/erlang/bin:${PATH}"
 
 build:
   cache_dir_list:

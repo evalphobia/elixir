@@ -3,18 +3,14 @@ box: erlang:18.3
 build:
   steps:
     - script:
-        name: install elixir
-        code: |
-          source /dev/stdin <<< "$(cat install_erlang.sh)"
-
-    - script:
         name: set env vars
         code: |
           export MIX_ENV=test
-          export PATH="${PATH}:/usr/local/bin"
+          export PATH="${PATH}"
 
     - script:
         name: test
         code: |
           cd $WERCKER_SOURCE_DIR
+          update-locale LC_ALL=en_US.UTF-8
           make compile && rm -rf .git && make test
