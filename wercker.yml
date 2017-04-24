@@ -1,4 +1,4 @@
-box: erlang:18.3
+box: evalphobia/erlang:18.3
 
 build:
   steps:
@@ -6,11 +6,9 @@ build:
         name: set env vars
         code: |
           export MIX_ENV=test
-          export PATH="${PATH}"
 
     - script:
         name: test
         code: |
           cd $WERCKER_SOURCE_DIR
-          update-locale LC_ALL=en_US.UTF-8
           make compile && rm -rf .git && make test
