@@ -8,7 +8,7 @@ dependencies:
   cache_directories:
     - "${HOME}/cache"
   pre:
-    - source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
+    - source /dev/stdin <<< "$(cat install_erlang.sh)"
 
 test:
   override:

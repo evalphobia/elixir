@@ -7,6 +7,6 @@ build:
   cache_dir_list:
     - "${HOME}/cache"
   pre_ci:
-    - source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
+    - source /dev/stdin <<< "$(cat install_erlang.sh)"
   ci:
     - "make compile && rm -rf .git && make test"
