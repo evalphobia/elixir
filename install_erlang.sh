@@ -3,7 +3,8 @@
 
 ERLANG_VERSION=${ERLANG_VERSION:="18.3"}
 ERLANG_PATH=${ERLANG_PATH:=$HOME/erlang}
-CACHED_DOWNLOAD="${HOME}/cache/erlang-OTP-${ERLANG_VERSION}.tar.gz"
+CACHE_PATH=${CACHE_PATH:=$HOME/cache}
+CACHED_DOWNLOAD="${CACHE_PATH}/erlang-OTP-${ERLANG_VERSION}.tar.gz"
 
 # credit: https://unix.stackexchange.com/questions/101080/realpath-command-not-found
 realpath() {
@@ -19,10 +20,11 @@ realpath() {
     echo "$dir$base"
 }
 
+mkdir -p "${CACHE_PATH}"
 mkdir -p "${ERLANG_PATH}"
 ERLANG_PATH=$(realpath "${ERLANG_PATH}")
 
-wget --continue --output-document "${CACHED_DOWNLOAD}" "https://s3.amazonaws.com/heroku-buildpack-elixir/erlang/cedar-14/OTP-${ERLANG_VERSION}.tar.gz"
+curl -L -o "${CACHED_DOWNLOAD}" "https://s3.amazonaws.com/heroku-buildpack-elixir/erlang/cedar-14/OTP-${ERLANG_VERSION}.tar.gz"
 tar -xaf "${CACHED_DOWNLOAD}" --strip-components=1 --directory "${ERLANG_PATH}"
 "${ERLANG_PATH}/Install" -minimal "${ERLANG_PATH}"
 
