@@ -1,4 +1,4 @@
-box: buildpack-deps:stretch-scm
+box: erlang:18.3
 
 build:
   steps:
@@ -11,6 +11,7 @@ build:
         name: set env vars
         code: |
           export MIX_ENV=test
+          export PATH="${PATH}:/usr/local/bin"
 
     - script:
         name: test

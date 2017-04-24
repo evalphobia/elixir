@@ -3,6 +3,7 @@ machine:
     version: 6.2.0
   environment:
     MIX_ENV: "test"
+    PATH: "${PATH}:${HOME}/erlang/bin"
 
 dependencies:
   cache_directories:
