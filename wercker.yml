@@ -1,0 +1,14 @@
+box: appcues/elixir-dev
+
+build:
+  steps:
+    - script:
+        name: set env vars
+        code: |
+          export MIX_ENV=test
+
+    - script:
+        name: test
+        code: |
+          cd $WERCKER_SOURCE_DIR
+          make compile && rm -rf .git && make test
