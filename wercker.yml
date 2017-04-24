@@ -1,4 +1,4 @@
-box: erlang:18.3
+box: elixir:12
 
 build:
   steps:

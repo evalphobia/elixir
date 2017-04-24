@@ -1,0 +1,14 @@
+language: none
+
+env:
+  ERLANG_VERSION: 18.3
+  PATH: "$HOME/otp-$ERLANG_VERSION/bin"
+  MIX_ENV: "test"
+
+build:
+  cache_dir_list:
+    - "$HOME/otp-$ERLANG_VERSION"
+  pre_ci:
+    - bash install_erlang.sh
+  ci:
+    - "make compile && rm -rf .git && make test"
