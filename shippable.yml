@@ -1,13 +1,13 @@
 language: none
 
 env:
-  MIX_ENV: "test"
-  PATH: "${HOME}/erlang/bin:${PATH}"
+  PATH: "~/erlang/bin:${PATH}"
 
 build:
   cache_dir_list:
     - "${HOME}/cache"
   pre_ci:
     - source /dev/stdin <<< "$(cat install_erlang.sh)"
+    - which erl
   ci:
     - "make compile && rm -rf .git && make test"

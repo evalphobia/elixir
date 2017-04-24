@@ -2,7 +2,6 @@ machine:
   node:
     version: 6.2.0
   environment:
-    MIX_ENV: "test"
     PATH: "${HOME}/erlang/bin:${PATH}"
 
 dependencies:
