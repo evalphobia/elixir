@@ -1,7 +1,7 @@
 SaaS CI perfomance compare by [Elixir](https://github.com/elixir-lang/elixir)
 =========
 
-[![TravisCI Build Status][1]][2] [![CircleCI Build Status][3]][4] [![SemaphoreCI Build Status][5]][6] [![wercker Build Status][7]][8] [![Codeship Build Status][9]][10] [![Shippable Build Status][11]][12]
+[![Travis CI Build Status][1]][2] [![CircleCI Build Status][3]][4] [![Semaphore CI Build Status][5]][6] [![Wercker Build Status][7]][8] [![Codeship Build Status][9]][10] [![Shippable Build Status][11]][12]
 
 [1]: https://travis-ci.org/evalphobia/saas-ci-performance-compare-elixir.svg?branch=master
 [2]: https://travis-ci.org/evalphobia/saas-ci-performance-compare-elixir
@@ -19,6 +19,17 @@ SaaS CI perfomance compare by [Elixir](https://github.com/elixir-lang/elixir)
 
 This repo fork [elixir-lang/elixir](https://github.com/elixir-lang/elixir) and use it to compare the build performance.
 Thanks for Elixir :heart:
+
+## SaaS CI services
+
+- [Travis CI](https://travis-ci.org/evalphobia/saas-ci-performance-compare-elixir)
+- [CircleCI](https://circleci.com/gh/evalphobia/saas-ci-performance-compare-elixir)
+- [Semaphore CI](https://semaphoreci.com/evalphobia/saas-ci-performance-compare-elixir)
+- [Wercker](https://app.wercker.com/project/byKey/2210c4d5ac6fd554853bcd42356a262c)
+- [Codeship](https://app.codeship.com/projects/214888)
+- [Shippable](https://app.shippable.com/github/evalphobia/saas-ci-performance-compare-elixir)
+- Drone.io (stopped)
+- Snap CI (stopped)
 
 ## License
 
