@@ -1,4 +1,4 @@
-box: elixir:12
+box: elixir:1.2
 
 build:
   steps:

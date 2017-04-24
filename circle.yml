@@ -7,7 +7,7 @@ machine:
     MIX_ENV: "test"
 
 dependencies:
-  cache_dir_list:
+  cache_directories:
     - "$HOME/otp-$ERLANG_VERSION"
   pre:
     - bash install_erlang.sh
