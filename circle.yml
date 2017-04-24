@@ -2,15 +2,13 @@ machine:
   node:
     version: 6.2.0
   environment:
-    ERLANG_VERSION: 18.3
-    PATH: "$HOME/otp-$ERLANG_VERSION/bin"
     MIX_ENV: "test"
 
 dependencies:
   cache_directories:
-    - "$HOME/otp-$ERLANG_VERSION"
+    - "${HOME}/cache"
   pre:
-    - bash install_erlang.sh
+    - source /dev/stdin <<< "$(curl -sSL https://raw.githubusercontent.com/codeship/scripts/master/languages/erlang.sh)"
 
 test:
   override:
