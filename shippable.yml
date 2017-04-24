@@ -9,6 +9,7 @@ build:
   pre_ci:
     - source /dev/stdin <<< "$(cat install_erlang.sh)"
     - export PATH=${ERLANG_PATH}:${PATH}
+    - ls -la $ERLANG_PATH
     - which erl
   ci:
     - export PATH=${ERLANG_PATH}:${PATH}
